@@ -10,12 +10,12 @@
   <!-- links: main serial chain -->
   <link name="base_link">
     <inertial>
-      <origin rpy="-1.5708 0 0" xyz="0.007551 -5.3594E-05 0.18051"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="22.973"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
     <visual>
-      <origin rpy="-1.5708 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://staubli_tx250_support/meshes/base_link.STL"/>
       </geometry>
@@ -24,7 +24,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="-1.5708 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://staubli_tx250_support/meshes/base_link.STL"/>
       </geometry>
@@ -32,7 +32,7 @@
   </link>
   <link name="link_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.085478 -0.0025471 -0.040487"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="45.357"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -54,7 +54,7 @@
   </link>
   <link name="link_2">
     <inertial>
-      <origin rpy="0 0 0" xyz="-4.2821E-06 -0.4373 0.26459"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="60.896"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -76,7 +76,7 @@
   </link>
   <link name="link_3">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0053614 -0.18215 -0.0015935"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="41.321"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -98,7 +98,7 @@
   </link>
   <link name="link_4">
     <inertial>
-      <origin rpy="0 0 0" xyz="-0.014458 -2.0763E-05 0.057777"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="2.2667"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -120,7 +120,7 @@
   </link>
   <link name="link_5">
     <inertial>
-      <origin rpy="0 0 0" xyz="0.0094371 -3.6945E-07 0.048577"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="1.3104"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -142,7 +142,7 @@
   </link>
   <link name="link_6">
     <inertial>
-      <origin rpy="0 0 0" xyz="-1.4874E-05 2.3311E-11 -0.0057413"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.081549"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
@@ -170,35 +170,35 @@
     <limit effort="0" lower="-2.79252680319" upper="2.79252680319" velocity="2.72271363311"/>
   </joint>
   <joint name="joint_2" type="revolute">
-    <origin rpy="-1.5708 0 0" xyz="0.15 0 0"/>
+    <origin rpy="0 0 0" xyz="0.15 0 0"/>
     <parent link="link_1"/>
     <child link="link_2"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 1 0"/>
     <limit effort="0" lower="-2.39982772149" upper="2.39982772149" velocity="2.49582083035"/>
   </joint>
   <joint name="joint_3" type="revolute">
-    <origin rpy="0 0 0" xyz="0 -1.025 0"/>
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
     <parent link="link_2"/>
     <child link="link_3"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 1 0"/>
     <limit effort="0" lower="-2.61799387799" upper="2.61799387799" velocity="3.63028484415"/>
   </joint>
   <joint name="joint_4" type="revolute">
-    <origin rpy="1.5708 0 0" xyz="0 -1.1558 0"/>
+    <origin rpy="0 0 0" xyz="0 0 1.1558"/>
     <parent link="link_3"/>
     <child link="link_4"/>
     <axis xyz="0 0 1"/>
     <limit effort="0" lower="-9.42477796077" upper="9.42477796077" velocity="6.87659725286"/>
   </joint>
   <joint name="joint_5" type="revolute">
-    <origin rpy="0 -0.7854 0" xyz="-0.063781 0 0.10248"/>
+    <origin rpy="0 0 0" xyz="-0.063781 0 0.10248"/>
     <parent link="link_4"/>
     <child link="link_5"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="-1 0 1"/>
     <limit effort="0" lower="-9.42477796077" upper="9.42477796077" velocity="6.87659725286"/>
   </joint>
   <joint name="joint_6" type="revolute">
-    <origin rpy="0 0.7854 0" xyz="0.063502 0 0.098102"/>
+    <origin rpy="0 0 0" xyz="-0.02446589 0 0.11427128"/>
     <parent link="link_5"/>
     <child link="link_6"/>
     <axis xyz="0 0 1"/>
@@ -211,22 +211,22 @@
     <parent link="base_link"/>
     <child link="base"/>
   </joint>
-  <joint name="joint_6-tool0" type="fixed">
-    <parent link="link_6"/>
-    <child link="tool0"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
+  <!--joint name="${prefix}joint_6-tool0" type="fixed">
+      <parent link="${prefix}link_6"/>
+      <child link="${prefix}tool0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint-->
   <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
   <link name="flange"/>
   <joint name="joint_6-flange" type="fixed">
-    <origin rpy="0 -1.57079632679 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="link_6"/>
     <child link="flange"/>
   </joint>
   <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
   <link name="tool0"/>
   <joint name="flange-tool0" type="fixed">
-    <origin rpy="0 1.57079632679 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="flange"/>
     <child link="tool0"/>
   </joint>
